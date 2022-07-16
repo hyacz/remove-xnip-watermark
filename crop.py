@@ -19,7 +19,7 @@ img       = Image.open(io.BytesIO(pb.get_contents(pasteboard.PNG)))
 
 # if retina display
 dpi = img.info.get('dpi', (96, 96))
-if dpi[0] >= 144:
+if dpi[0] > 96:
     WM_H *= 2
 
 # if too narrow
